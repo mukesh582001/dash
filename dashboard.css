@@ -1,0 +1,163 @@
+body {
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f7f9fb 100%);
+  margin: 0;
+  color: #222;
+  min-height: 100vh;
+}
+.dashboard-header {
+  background: linear-gradient(90deg, #4f8cff 0%, #00c49a 100%);
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  text-align: center;
+  border-radius: 0 0 28px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.dashboard-header h1 {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(44,62,80,0.10);
+}
+.dashboard-main {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(79,140,255,0.10);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+.card:hover {
+  box-shadow: 0 12px 40px rgba(44,62,80,0.18);
+  transform: translateY(-4px) scale(1.01);
+}
+.table-section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f8cff;
+  letter-spacing: 1px;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 900px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+  transition: box-shadow 0.2s;
+}
+th, td {
+  padding: 1rem 1.2rem;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+th {
+  background: linear-gradient(90deg, #e0e7ff 0%, #f0f4f8 100%);
+  font-weight: 700;
+  color: #2a3b4c;
+  font-size: 1.08rem;
+  border-bottom: 2px solid #4f8cff22;
+}
+tbody tr:nth-child(even) {
+  background: #f7faff;
+}
+tbody tr:hover {
+  background: #e0f3ff;
+  color: #4f8cff;
+  transition: background 0.2s, color 0.2s;
+}
+td {
+  font-size: 1.04rem;
+}
+.charts-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+.chart-container {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 400px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(44,62,80,0.10);
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.chart-container:hover {
+  box-shadow: 0 8px 32px rgba(44,62,80,0.16);
+  transform: translateY(-2px) scale(1.01);
+}
+/* Floating Action Button for polish */
+.fab {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  background: linear-gradient(135deg, #4f8cff 0%, #00c49a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+}
+.fab:hover {
+  box-shadow: 0 8px 32px rgba(44,62,80,0.22);
+  background: linear-gradient(135deg, #00c49a 0%, #4f8cff 100%);
+  transform: scale(1.08);
+}
+@media (max-width: 900px) {
+  .dashboard-main {
+    padding: 0 0.5rem;
+  }
+  .charts-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .chart-container {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+  }
+  .card {
+    padding: 1.2rem 0.5rem;
+  }
+  table {
+    min-width: 700px;
+    font-size: 0.95rem;
+  }
+} 

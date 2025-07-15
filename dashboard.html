@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biorev Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Biorev</h1>
+  </header>
+  <main class="dashboard-main">
+    <section class="card table-section">
+      <h2>Lead Source Summary</h2>
+      <div class="table-responsive">
+        <table id="lead-table">
+          <thead>
+            <tr>
+              <th>Lead Source</th>
+              <th>Total Leads</th>
+              <th>Connected</th>
+              <th>Not Interested</th>
+              <th>Not Connected</th>
+              <th>Meetings Performed</th>
+              <th>Quote Requested</th>
+              <th>Converted</th>
+              <th>Revenue (New Clients)</th>
+              <th>Revenue (Existing Clients)</th>
+              <th>% Demo Converted</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table rows will be injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card charts-section">
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="percentChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Lead Status Breakdown (Stacked Bar)</h3>
+        <canvas id="stackedBarChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Converted Leads by Source (Doughnut)</h3>
+        <canvas id="doughnutChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Meetings vs Quotes (Horizontal Bar)</h3>
+        <canvas id="horizontalBarChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Lead Source Radar</h3>
+        <canvas id="radarChart"></canvas>
+      </div>
+    </section>
+  </main>
+  <script src="dashboard.js"></script>
+  <button class="fab" title="Add New">
+    <span class="material-icons">add</span>
+  </button>
+</body>
+</html> 
